@@ -15,6 +15,8 @@
 
 [로컬 저장소에서 작업한 파일을 원격 저장소에 반영하기](#로컬-저장소에서-작업한-파일을-원격-저장소에-반영하기)
 
+  - [Git Workflow](#git-workflow)
+  
   - [commit message convention](#commit-message-conventeion)
 
 [참고자료](#참고자료)
@@ -79,7 +81,7 @@
 
 ## 로컬 저장소에서 작업한 파일을 원격 저장소에 반영하기
 
-- Git Workflow
+- #### Git Workflow
 
   <img src="./imgs/Git-10.svg">
 
