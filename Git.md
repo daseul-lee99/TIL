@@ -58,6 +58,7 @@
         <img src="./imgs/Git-3.png" width="80%">
         <img src="./imgs/Git-4.png" width="80%">
 
+---
 <br>
 
 ## 로컬 저장소에 원격 저장소 가져오기
@@ -77,6 +78,7 @@
 
     <img src="./imgs/Git-8.png" width="80%">
 
+---
 <br>
 
 ## 로컬 저장소에서 작업한 파일을 원격 저장소에 반영하기
@@ -144,6 +146,7 @@
 
     <img src="./imgs/Git-16.png" width="%80">
 
+---
 <br>
 
 ## 참고자료
@@ -151,3 +154,5 @@
 - [SSH 명칭부터 접속까지 한 번에 이해하기](https://library.gabia.com/contents/infrahosting/9002/)
 - [NeSI - Git: Reference Sheet](https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet)
 - [git 커밋 컨벤션 설정하기](https://velog.io/@shin6403/Git-git-%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
+
+---
