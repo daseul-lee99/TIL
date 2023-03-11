@@ -15,6 +15,8 @@
 
 [로컬 저장소에서 작업한 파일을 원격 저장소에 반영하기](#로컬-저장소에서-작업한-파일을-원격-저장소에-반영하기)
 
+  - [commit message convention](#commit-message-conventeion)
+
 [참고자료](#참고자료)
 
 ---
@@ -93,12 +95,48 @@
 <br>
 
 - git add, commit, push
-  - ./etc/Markdown.md 파일 생성 후 `git status`로 현재 상태 확인
+  - `git status`: ./etc/Markdown.md 파일 생성 후 현재 상태 확인
 
     <img src="./imgs/Git-9.png" width="80%">
 
     - `Untracked files`: 신규 생성되어 Git에서 추적하지 못하는 파일(버전 관리 X)
-    - 버전관리를 하고자하는 파일이면 add, commit, push를 통해 원격 저장소의 repository에 반영해줘야 함
+    - 버전관리를 하고자하는 파일이면 add, commit, push를 통해 remote repository(원격저장소)에 반영해줘야 함
+
+  - `git add 대상파일`: 새로운 파일/디렉터리를 staging area로 올리기. `.`은 변경이 있는 모든 파일
+  
+    <img src="./imgs/Git-11.png" width="80%">
+
+  - `git commit -m message`: staging area에 올라간 파일 local repository에 반영
+
+    <img src="./imgs/Git-12.png" width="80%">
+    <img src="./imgs/Git-13.png" width="80%">
+    <img src="./imgs/Git-14.png" width="80%">
+
+     > #### commit message conventeion <br>
+     > ```
+     > type: subject
+     > 
+     > body
+     > 
+     > footer
+     > ```
+     > ```
+     > Feat: 로그인 기능 구현
+     > 
+     > 구글, 카카오 로그인 구현
+     > 
+     > Resolves: #111
+     > ```
+     > - type: **feat**(기능 추가), **fix**(버그 수정), **docs**(문서 수정), **style**(코드 포맷팅 등 코드 변경이 없는 수정), **refactor**(코드 리팩토링), **test**(테스트 코드 추가), **chore**(빌드 업무/패키지 매니저 수정)
+     > - subject: 수정 내용을 간략하게 서술
+     > - body: 무엇을 왜 수정했는지 상세하게 서술
+     > - footer: optional. 이슈 트래커 ID 작성(**유형: #번호**). **Fixes**(이슈 수정 중), **Resolves**(이슈 해결), **Ref**(참고할 이슈가 있을 때), **Related to**(관련 이슈 번호)
+
+  - `git push 원격저장소명 브랜치명`: local repository(로컬 저장소) 내용을 remote repository(원격 저장소)에 반영
+  
+    <img src="./imgs/Git-15.png" width="80%">
+
+    - 원격저장소명은 `git remote`로 설정한 alias(default origin)
 
 <br>
 
