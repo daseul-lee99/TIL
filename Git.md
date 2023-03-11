@@ -16,7 +16,7 @@
 [로컬 저장소에서 작업한 파일을 원격 저장소에 반영하기](#로컬-저장소에서-작업한-파일을-원격-저장소에-반영하기)
 
   - [Git Workflow](#git-workflow)
-  
+
   - [commit message convention](#commit-message-conventeion)
 
 [참고자료](#참고자료)
@@ -139,6 +139,10 @@
     <img src="./imgs/Git-15.png" width="80%">
 
     - 원격저장소명은 `git remote`로 설정한 alias(default origin)
+
+  - GitHub에서 반영된 내용 확인
+
+    <img src="./imgs/Git-16.png" width="%80">
 
 <br>
 
