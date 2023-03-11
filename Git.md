@@ -13,7 +13,9 @@
 
 [로컬 저장소에 원격 저장소 가져오기](#로컬-저장소에-원격-저장소-가져오기)
 
-[로컬 저장소에서 작업한 파일 원격 저장소에 반영하기](#로컬-저장소에서-작업한-파일-원격-저장소에-반영하기)
+[로컬 저장소에서 작업한 파일을 원격 저장소에 반영하기](#로컬-저장소에서-작업한-파일을-원격-저장소에-반영하기)
+
+[참고자료](#참고자료)
 
 ---
 <br>
@@ -36,7 +38,7 @@
 ## SSH KEY 생성
 [자료 참조 - SSH 키 만들기](https://white-blank.tistory.com/8)
 
- - SSH(Secure SHell)란? 원격 호스트(여기서는 Git)에 접속하기 위해 사용되는 보안 프로토콜 ([자료 참조 - SSH 명칭부터 접속까지 한 번에 이해하기](https://library.gabia.com/contents/infrahosting/9002/))
+ - SSH(Secure SHell)란? 원격 호스트(여기서는 Git)에 접속하기 위해 사용되는 보안 프로토콜
 
    - 개인키(.pem)와 공개키(.pub)를 이용해 상대를 인증하고 통신
 
@@ -56,7 +58,7 @@
 
 ## 로컬 저장소에 원격 저장소 가져오기
 
-- git clone
+- git clone, remote
   - `git clone repo주소`: 원격 저장소의 repository를 로컬에 복사
 
     <img src="./imgs/Git-7.png" width="80%">
@@ -73,7 +75,22 @@
 
 <br>
 
-## 로컬 저장소에서 작업한 파일 원격 저장소에 반영하기
+## 로컬 저장소에서 작업한 파일을 원격 저장소에 반영하기
+
+- Git Workflow
+
+  <img src="./imgs/Git-10.svg">
+
+  - **Working Directory**: 신규 파일 생성, 기존 파일 수정 등 현재 사용자가 작업 중인 로컬 디렉터리(pc 저장소)
+  - **Staging Area**: commit 될 파일에 대한 정보를 가지고 있는 공간. `git add` 명령어를 통해 작업 파일을 working directory에서 staging area로 올림
+    > staging area 장점 <br>
+    > - 수정 파일이 많을 때 staging area를 통해 원하는 부분만 선택적으로 commit
+    > - 일부 파일에만 merge 충돌이 있을 때, 충돌이 없는 파일만 선택적으로 commit (충돌 파일은 수정 후 다시 add, commit)
+    > - staging area만 올리고 아직 commit하지 않은 파일을 재수정(파일 내용, commit message 등)
+  - **Local Repository**: git이 관리하는 repository (보기엔 working directory와 동일). `git commit` 명령어를 통해 staging area의 내용을 local repository에 반영. 버전관리 O
+  - **Remote Repository**: 여러 사용자와 공유할 수 있는 repository(원격 저장소). `git push` 명령어를 통해 local repository의 내용을 remote repository에 반영(GitHub에서 확인 가능)
+
+<br>
 
 - git add, commit, push
   - ./etc/Markdown.md 파일 생성 후 `git status`로 현재 상태 확인
@@ -83,6 +100,9 @@
     - `Untracked files`: 신규 생성되어 Git에서 추적하지 못하는 파일(버전 관리 X)
     - 버전관리를 하고자하는 파일이면 add, commit, push를 통해 원격 저장소의 repository에 반영해줘야 함
 
-<!--
-  <img src="./imgs/Git-10.svg">
--->
+<br>
+
+## 참고자료
+
+- [SSH 명칭부터 접속까지 한 번에 이해하기](https://library.gabia.com/contents/infrahosting/9002/)
+- [NeSI - Git: Reference Sheet](https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet)
